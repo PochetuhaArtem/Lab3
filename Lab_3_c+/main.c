@@ -4,7 +4,7 @@
 #include <conio.h>
 #include <time.h>
 
-double F(double x)// Основная функция
+double F(double x)// ГЋГ±Г­Г®ГўГ­Г Гї ГґГіГ­ГЄГ¶ГЁГї
 {
     return pow(x,3)-0.2*pow(x,2)+0.5*x+1.5;
 }
@@ -35,11 +35,11 @@ int main()
         printf("Right limit: \n");
         scanf("%lf",&x2);
       }
-      while(F(x1)>0 && F(x2)<0);//Сравниваем допустимые параметры. Пример(х1 = -2, х2 = 2)
+      while(F(x1)>0 && F(x2)<0);//Г‘Г°Г ГўГ­ГЁГўГ ГҐГ¬ Г¤Г®ГЇГіГ±ГІГЁГ¬Г»ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г». ГЏГ°ГЁГ¬ГҐГ°/Example : (x1 = -2, x2 = 2)
       printf("Fault: \n");
       scanf("%lf",&fault);
       printf("Max count of iterations: \n");
-      clock_t T1 = clock();//Записываем в переменную Т1 значение clock
+      clock_t T1 = clock();//Г‡Г ГЇГЁГ±Г»ГўГ ГҐГ¬ Гў ГЇГҐГ°ГҐГ¬ГҐГ­Г­ГіГѕ Г’1 Г§Г­Г Г·ГҐГ­ГЁГҐ clock
       scanf("%d",&N);
       do
       {
@@ -57,9 +57,9 @@ int main()
             printf("The maximum number of iterations is reached\n");
             printf("Press ESC to finish the calculation \nor press any key to continue the calculation\n");
             i = getch();
-            if((int)i==27)// в таблице аски ESC имеет номер 27, мы переводим ЧАР в ИНТ и сравниваем значения
+            if((int)i==27)// Гў ГІГ ГЎГ«ГЁГ¶ГҐ Г Г±ГЄГЁ ESC ГЁГ¬ГҐГҐГІ Г­Г®Г¬ГҐГ° 27, Г¬Г» ГЇГҐГ°ГҐГўГ®Г¤ГЁГ¬ Г—ГЂГђ Гў Г€ГЌГ’ ГЁ Г±Г°Г ГўГ­ГЁГўГ ГҐГ¬ Г§Г­Г Г·ГҐГ­ГЁГї
             {
-                system("cls");//чистим консоль
+                system("cls");//Г·ГЁГ±ГІГЁГ¬ ГЄГ®Г­Г±Г®Г«Гј
                 break;
             }
             else
@@ -71,7 +71,7 @@ int main()
       }
       while ( fabs (F(xi)) > fault );
       clock_t T2 = clock();
-        Dump(xi,fabs (F(xi)),n,(double)(T2 - T1) / CLOCKS_PER_SEC);//вызывем функцию и передаем в нее 4 параметра
+        Dump(xi,fabs (F(xi)),n,(double)(T2 - T1) / CLOCKS_PER_SEC);//ГўГ»Г§Г»ГўГҐГ¬ ГґГіГ­ГЄГ¶ГЁГѕ ГЁ ГЇГҐГ°ГҐГ¤Г ГҐГ¬ Гў Г­ГҐГҐ 4 ГЇГ Г°Г Г¬ГҐГІГ°Г 
        break;
     case 2:
       do
